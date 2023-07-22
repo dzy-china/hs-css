@@ -1,0 +1,58 @@
+// 网格式布局基础 
+[class*="hs-list-col-"]{
+    overflow: hidden;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    >* {
+        display: block !important;
+    }    
+    >*>* {
+		width:100%; //单列宽度
+        float: left;
+        box-sizing: border-box;
+    }    
+}
+    
+//定义边距等级数
+$marginGrade:6;
+//定义边距规则
+@function getmargin($k) {
+    @return $k * 5;
+}
+
+/* 列间距 */
+@for $k from 1 through $marginGrade {
+    $margin: getmargin($k);
+    // 添加边距
+    .hs-list-col-gap-#{$margin}>*>* {
+        margin-right: #{$margin}px;
+    }
+     // 网格布局单元格空隙优化处理
+    .hs-list-col-gap-#{$margin}>* {
+        margin-right: -#{$margin}px;
+    }
+}
+
+
+/* 列属性 */
+@for $col from 2 through 12 {
+    //单元格基本列宽
+    .hs-list-col-#{$col}>*>* {
+        width: calc(100% / #{$col});
+    }
+    //单元格空隙
+    @for $k from 1 through $marginGrade {
+        $margin: getmargin($k);
+        .hs-list-col-#{$col}.hs-list-col-gap-#{$margin}>*>* {
+            width: calc((100% - #{$col} * #{$margin}px) / #{$col});
+        }
+    }
+    // 每行首个单元格清除浮动，防止float引起的错位
+    // n(0, 1, 2, 3, ...)
+    .hs-list-col-#{$col}>*>:nth-child(#{$col}n+1) {
+        clear: left;
+    }
+}

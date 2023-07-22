@@ -1,0 +1,67 @@
+// 1.flex对齐 v2
+[class*="hs-child-row-"]>*,
+[class*="hs-row-"] {
+    -webkit-display: flex;
+    display: flex;
+    flex-direction: row;
+}
+
+[class*="hs-child-col-"]>*,
+[class*="hs-col-"] {
+    -webkit-display: flex;
+    display: flex;
+    flex-direction: column;
+} 
+
+//主轴"对齐方式"值映射
+$justify_content_map: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around
+ );
+
+//交叉轴"对齐方式"值映射
+$align_items_map: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    stretch: stretch,
+    baseline: baseline
+);
+
+
+@each $justify_content_map_key,$justify_content_map_val in  $justify_content_map{
+    @each $align_items_map_key,$align_items_map_val in  $align_items_map {
+        .hs-child-row-#{$justify_content_map_key}-#{$align_items_map_key}>*,
+        .hs-row-#{$justify_content_map_key}-#{$align_items_map_key} {
+            justify-content: $justify_content_map_val;
+            align-items: $align_items_map_val;
+        }
+        .hs-child-col-#{$justify_content_map_key}-#{$align_items_map_key}>*,
+        .hs-col-#{$justify_content_map_key}-#{$align_items_map_key} {
+            justify-content: $justify_content_map_val;
+            align-items: $align_items_map_val;
+        }
+    }
+} 
+
+
+//2.垂直对齐
+$vertical_align:top,
+middle,
+bottom;
+@each $vertical_align_val in $vertical_align {
+    .hs-child-vertical-align-#{$vertical_align_val}>*,
+    .hs-vertical-align-#{$vertical_align_val} {
+        vertical-align: $vertical_align_val;
+    }
+}
+
+//3.定位中心对齐
+.hs-absolute-center{
+   position: absolute;
+   inset:0;
+   margin:auto;
+}
