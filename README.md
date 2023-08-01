@@ -153,7 +153,7 @@ hs-white-space-nowrap
 ```
 #### 4.6、溢出文本显示省略号
 ``` css
-hs-line-clamp-[1-6]
+hs-text-overflow-ellipsis
 ```
 #### 4.7、字体大小
 >注： [0.1-5] = [0.1em- 5em]
