@@ -1,19 +1,6 @@
 .hs-child-ini>*,
 .hs-ini {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    color: inherit;
-    text-decoration: none;
-    list-style: none;
-    border-collapse: collapse;
-    vertical-align: top;
-    border: 0;
-    font-weight: 400;
-    font-size: inherit;
-    font-style: normal;
-    appearance: none;
-    -webkit-appearance: none
+    all:unset;
 }
 
 body.hs-ini,
