@@ -44,14 +44,19 @@ none;
 }
 
 //6.溢出文本显示省略号
-.hs-child-text-overflow-ellipsis>*,
-.hs-text-overflow-ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
+[class*="hs-child-text-overflow-ellipsis-"]>*,
+[class*="hs-text-overflow-ellipsis-"]{
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
-
+@for $k from 1 through 6 {
+    .hs-child-text-overflow-ellipsis-#{$k}>*,
+    .hs-text-overflow-ellipsis-#{$k} {
+        -webkit-line-clamp: $k;
+    }
+}
 
 //7.字体大小
 //整数字体[1-5]em
