@@ -1,0 +1,70 @@
+/* 显隐控制 */
+// 1.元素类型显示设置
+$display_list: block,
+inline-block,
+flex,
+inline-flex,
+table,
+inline;
+@each $display_val in $display_list {
+    .hs-child-display-#{$display_val}>*,
+    .hs-display-#{$display_val} {
+        display: $display_val;
+    }
+}
+    
+//2.弹性盒子
+.hs-child-box-sizing-border-box>*,
+.hs-box-sizing-border-box {
+    box-sizing: border-box;
+}
+
+//3.浮动
+//3.1.浮动类型
+$float_decoration_list:left,
+right,
+none;
+@each $float_decoration_val in $float_decoration_list {
+    .hs-child-float-#{$float_decoration_val}>*,
+    .hs-float-#{$float_decoration_val} {
+        float: $float_decoration_val;
+    }
+}
+
+//3.2.清除浮动
+.hs-child-clear-both>*,
+.hs-clear-both {
+    clear: both;
+}
+
+//4.溢出控制
+$overflow_list:hidden,
+scroll,
+auto;
+@each $overflow_val in $overflow_list {
+    .hs-child-overflow-#{$overflow_val}>*,
+    .hs-overflow-#{$overflow_val} {
+        overflow: $overflow_val;
+    }
+    .hs-child-overflow-x-#{$overflow_val}>*,
+    .hs-overflow-x-#{$overflow_val} {
+        overflow-x: $overflow_val;
+    }
+    .hs-child-overflow-y-#{$overflow_val}>*,
+    .hs-overflow-y-#{$overflow_val} {
+        overflow-y: $overflow_val;
+    }
+}
+
+// 5. 滚动条隐藏
+.hs-scrollbar-none::-webkit-scrollbar{
+    display:none
+}
+
+// 6. flex-grow
+@for $k from 1 through 3 {
+    .hs-child-flex-grow-#{$k}>*,
+    .hs-flex-grow-#{$k}{
+        flex-grow: $k;
+    }
+}

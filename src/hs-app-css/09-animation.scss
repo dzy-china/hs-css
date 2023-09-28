@@ -1,0 +1,59 @@
+//动画
+//1.执行时间[0.1s-0.9s]
+@for $i from 1 through 9 {
+    $time: calc($i / 10);
+    .hs-child-transition-0#{$i}>*,
+    .hs-transition-0#{$i} {
+        transition: $time + s;
+    }
+}
+
+//2. x轴平移和y轴平移  [5%-100%]
+@for $i from 1 through 20 {
+    $per: $i * 5;
+    .hs-child-transform-translateX-00#{$per}>*,
+    .hs-transform-translateX-00#{$per} {
+        transform: translateX($per * 1%);
+    }
+    .hs-child-transform-translateX--00#{$per}>*,
+    .hs-transform-translateX--00#{$per} {
+        transform: translateX(-$per * 1%);
+    }
+    .hs-child-transform-translateY-00#{$per}>*,
+    .hs-transform-translateY-00#{$per} {
+        transform: translateY($per * 1%);
+    }
+    .hs-child-transform-translateY--00#{$per}>*,
+    .hs-transform-translateY--00#{$per} {
+        transform: translateY(-$per * 1%);
+    }
+}
+
+//3. 缩放  [0.1-0.9][1.1-1.9]
+@for $i from 1 through 9 {
+    $size: calc($i / 10);
+    .hs-child-transform-scale-010#{$i}>*,
+    .hs-transform-scale-010#{$i} {
+        transform: scale(1 + $size);
+    }
+    .hs-child-transform-scale-0#{$i}>*,
+    .hs-transform-scale-0#{$i} {
+        transform: scale($size);
+    }
+}
+
+//4. 旋转
+$rotate_list:45,
+90,
+180;
+@each $rotate_val in $rotate_list {
+    .hs-child-transform-rotate-#{$rotate_val}>*,
+    .hs-transform-rotate-#{$rotate_val} {
+        transform:rotate(#{$rotate_val}deg);
+    }
+    .hs-child-transform-rotate--#{$rotate_val}>*,
+    .hs-transform-rotate--#{$rotate_val} {
+        transform:rotate(-#{$rotate_val}deg);
+    }
+}
+

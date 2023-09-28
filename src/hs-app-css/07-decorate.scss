@@ -1,0 +1,221 @@
+//1.圆角 
+.hs-child-border-radius-00100>*,
+.hs-border-radius-00100 {
+    border-radius: 100%;
+}
+
+@for $i from 1 through 3 {
+    $size: $i * 5;
+    .hs-child-border-radius-#{$size}>*,
+    .hs-border-radius-#{$size} {
+        border-radius: $size + px;
+    }
+    .hs-child-border-top-left-radius-#{$size}>*,
+    .hs-border-top-left-radius-#{$size} {
+        border-top-left-radius: $size + px;
+    }
+    .hs-child-border-top-right-radius-#{$size}>*,
+    .hs-border-top-right-radius-#{$size} {
+        border-top-right-radius: $size + px;
+    }
+    .hs-child-border-bottom-right-radius-#{$size}>*,
+    .hs-border-bottom-right-radius-#{$size} {
+        border-bottom-right-radius: $size + px;
+    }
+    .hs-child-border-bottom-left-radius-#{$size}>*,
+    .hs-border-bottom-left-radius-#{$size} {
+        border-bottom-left-radius: $size + px;
+    }
+}
+
+//2.边框
+$border_style_list:dotted,
+dashed,
+solid; 
+$border_direction_list: top,
+right,
+bottom,
+left;
+@each $border_style_val in $border_style_list {
+    //无边框颜色透明度
+    // 四边边框   
+    .hs-child-border-1-#{$border_style_val}-gray>*,
+    .hs-border-1-#{$border_style_val}-gray {
+        border: 1px $border_style_val gray;
+    }
+    // 单边边框   
+    @each $border_direction_val in $border_direction_list {
+        .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray>*,
+        .hs-border-#{$border_direction_val}-1-#{$border_style_val}-gray {
+            border-#{$border_direction_val}: 1px $border_style_val gray;
+        }
+    }
+    //有边框颜色透明度
+    @for $alpha from 1 through 9 {
+        $alpha-index: calc($alpha / 10);
+            // 四边边框   
+            .hs-child-border-1-#{$border_style_val}-gray-0#{$alpha}>*,
+            .hs-border-1-#{$border_style_val}-gray-0#{$alpha} {
+                border: 1px $border_style_val rgba(gray, $alpha-index);
+            }
+            // 单边边框   
+            @each $border_direction_val in $border_direction_list {
+                .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray-0#{$alpha}>*,
+                .hs-border-#{$border_direction_val}-1-#{$border_style_val}-gray-0#{$alpha} {
+                    border-#{$border_direction_val}: 1px $border_style_val rgba(gray, $alpha-index);
+                }
+            }
+    }
+}
+
+// 仅边框宽度和边框类型
+@each $border_style_val in $border_style_list {
+    @for $border-width from 1 through 5 {
+        // 四边边框   
+        .hs-child-border-#{$border-width}-#{$border_style_val}>*,
+        .hs-border-#{$border-width}-#{$border_style_val} {
+            border:$border-width + px $border_style_val;
+        }
+        // 单边边框  
+        @each $border_direction_val in $border_direction_list {
+            .hs-child-border-#{$border_direction_val}-#{$border-width}-#{$border_style_val}>*,
+            .hs-border-#{$border_direction_val}-#{$border-width}-#{$border_style_val} {
+                border-#{$border_direction_val}:$border-width + px $border_style_val;
+            }
+        }
+    }
+}
+
+//边框色
+$border_color_list: (
+        "black":black,
+        "blue":blue,
+        "gray":gray,
+        "green":green,
+        "red":red,
+        "white":white,
+        "yellow":yellow
+);
+
+@each $border_color_key,$border_color_val in $border_color_list {
+    .hs-child-border-color-#{$border_color_key}>*,
+    .hs-border-color-#{$border_color_key} {
+        border-color: $border_color_val;
+    }
+    .hs-child-hover-border-color-#{$border_color_key}>*:hover,
+    .hs-hover-border-color-#{$border_color_key}:hover {
+        border-color: $border_color_val;
+    }
+    //透明度
+    //排除无色透明度样式
+        @for $alpha from 1 through 9 {
+            $alpha-index: calc($alpha / 10);
+            .hs-child-border-color-#{$border_color_key}-0#{$alpha}>*,
+            .hs-border-color-#{$border_color_key}-0#{$alpha} {
+                border-color: rgba($border_color_val, $alpha-index);
+            }
+            .hs-child-hover-border-color-#{$border_color_key}-0#{$alpha}>*:hover,
+            .hs-hover-border-color-#{$border_color_key}-0#{$alpha}:hover {
+                border-color: rgba($border_color_val, $alpha-index);
+            }
+        }
+}
+    
+//初始化四边框 none
+.hs-child-border-none>*,
+.hs-border-none {
+    border: none !important;
+}
+//初始化边框 单边框none
+@each $border_direction_val in $border_direction_list {
+    .hs-child-border-#{$border_direction_val}-none>*,
+    .hs-border-#{$border_direction_val}-none {
+        border-#{$border_direction_val}: none !important;
+    }
+}
+
+//3.透明度
+@for $i from 1 through 9 {
+    $opacityVal: calc($i / 10);
+    .hs-child-opacity-0#{$i}>*,
+    .hs-opacity-0#{$i} {
+        opacity: $opacityVal;
+    }
+}
+
+//4.阴影(仅提供右面或下面或右下角和四边阴影)
+//外阴影
+@for $i from 0 through 1 {
+    @for $k from 0 through 1 {
+        @each $j in 5,10,15 {
+			@for $alpha-index from 1 through 3 {
+			    $alpha-val: calc($alpha-index / 10);
+				.hs-child-box-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>*,
+				.hs-box-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
+					box-shadow: $i + px $k + px $j + px rgba(black, $alpha-val);
+				}
+				.hs-child-text-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>*,
+				.hs-text-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
+					text-shadow: $i + px $k + px $j + px rgba(black, $alpha-val);
+				}
+			}
+        }
+    }
+}
+//内阴影
+@for $i from 0 through 1 {
+    @for $k from 0 through 1 {
+        @each $j in 5,10,15 {
+			@for $alpha-index from 1 through 3 {
+			    $alpha-val: calc($alpha-index / 10);
+				.hs-child-box-shadow-inset-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>*,
+				.hs-box-shadow-inset-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
+					box-shadow: $i + px $k + px $j + px rgba(black, $alpha-val) inset;
+				}
+			}
+        }
+    }
+}
+
+//5. 鼠标形状
+ $cursor_list:default,pointer,not-allowed;
+@each $cursor_val in $cursor_list {   
+    .hs-child-cursor-#{$cursor_val}>*,
+    .hs-cursor-#{$cursor_val}{
+        cursor: $cursor_val;
+    }
+}
+//6.全屏半透明遮罩
+.hs-screen-shade-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10
+}
+
+//7.滚动条(代替浏览器默认滚动条)
+.hs-scrollbar {
+    overflow: auto
+}
+
+.hs-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+
+.hs-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+.hs-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
+    border-radius: 5px
+}
+
+//8.图片滤镜
+.hs-filter-grayscale-00100 {
+    filter:grayscale(100%)
+}
