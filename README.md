@@ -3,6 +3,7 @@
 > 2. 00开头代表百分号
 > 3. 数字(包括0)代表实际值，如未特别说明，单位均为px
 > 4. 数字步长，如未特别说明，默认均为5
+> 5. 以hs-child-开头表示作用于全部子元素
 
 ### 一、网格布局
 **1.1、类参数说明：**
@@ -35,6 +36,7 @@ hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-
 **2.1.1、基础语法**
 ``` css
 hs-[row,col]-[start,center,end,between,around]-[start,center,end,stretch,baseline]
+hs-[row-reverse,col-reverse]
 ```
 
 **start** 与父元素开头对齐
@@ -202,6 +204,10 @@ hs-[min,max]-width-[5-1200,005-00100]
 hs-height-[0-4]
 hs-[min,max]-height-[5-500,005-00100]
 hs-line-height-[5-500]
+hs-width-[5-100]-vh
+hs-[min,max]-width-[5-100]-vh
+hs-height-[5-100]-vh
+hs-[min,max]-height-[5-100]-vh
 ```
 
 ### 七、装饰
