@@ -4,7 +4,7 @@ $position_list:absolute,
 relative,
 fixed;
 @each $position_val in $position_list {
-    .hs-child-position-#{$position_val}>*,
+    .hs-child-position-#{$position_val}>.hs,
     .hs-position-#{$position_val} {
         position: $position_val;
     }
@@ -17,7 +17,7 @@ $z_index_list:1,
 1000,
 10000;
 @each $z_index_val in $z_index_list {
-    .hs-child-z-index-#{$z_index_val}>*,
+    .hs-child-z-index-#{$z_index_val}>.hs,
     .hs-z-index-#{$z_index_val} {
         z-index: $z_index_val;
     }

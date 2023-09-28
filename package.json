@@ -4,8 +4,9 @@
   "description": "一个轻量级纯css框架",
   "main": "main.js",
   "scripts": {
-    "build": "node  main.js",
-    "build-test": "node  main-test.js"
+    "build-for-html5": "node  html5.js",
+    "build-for-app": "node  app.js",
+    "build-for-test": "node  test.js"
   },
   "keywords": [],
   "author": "",

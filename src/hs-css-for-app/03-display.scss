@@ -7,14 +7,14 @@ inline-flex,
 table,
 inline;
 @each $display_val in $display_list {
-    .hs-child-display-#{$display_val}>*,
+    .hs-child-display-#{$display_val}>.hs,
     .hs-display-#{$display_val} {
         display: $display_val;
     }
 }
     
 //2.弹性盒子
-.hs-child-box-sizing-border-box>*,
+.hs-child-box-sizing-border-box>.hs,
 .hs-box-sizing-border-box {
     box-sizing: border-box;
 }
@@ -25,14 +25,14 @@ $float_decoration_list:left,
 right,
 none;
 @each $float_decoration_val in $float_decoration_list {
-    .hs-child-float-#{$float_decoration_val}>*,
+    .hs-child-float-#{$float_decoration_val}>.hs,
     .hs-float-#{$float_decoration_val} {
         float: $float_decoration_val;
     }
 }
 
 //3.2.清除浮动
-.hs-child-clear-both>*,
+.hs-child-clear-both>.hs,
 .hs-clear-both {
     clear: both;
 }
@@ -42,15 +42,15 @@ $overflow_list:hidden,
 scroll,
 auto;
 @each $overflow_val in $overflow_list {
-    .hs-child-overflow-#{$overflow_val}>*,
+    .hs-child-overflow-#{$overflow_val}>.hs,
     .hs-overflow-#{$overflow_val} {
         overflow: $overflow_val;
     }
-    .hs-child-overflow-x-#{$overflow_val}>*,
+    .hs-child-overflow-x-#{$overflow_val}>.hs,
     .hs-overflow-x-#{$overflow_val} {
         overflow-x: $overflow_val;
     }
-    .hs-child-overflow-y-#{$overflow_val}>*,
+    .hs-child-overflow-y-#{$overflow_val}>.hs,
     .hs-overflow-y-#{$overflow_val} {
         overflow-y: $overflow_val;
     }
@@ -63,7 +63,7 @@ auto;
 
 // 6. flex-grow
 @for $k from 1 through 3 {
-    .hs-child-flex-grow-#{$k}>*,
+    .hs-child-flex-grow-#{$k}>.hs,
     .hs-flex-grow-#{$k}{
         flex-grow: $k;
     }

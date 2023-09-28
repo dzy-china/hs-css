@@ -1,0 +1,83 @@
+//颜色字典
+$color_map:(
+        "black": black,
+        "blue": blue,
+        "gray": gray,
+        "green": green,
+        "red": red,
+        "white": white,
+        "yellow": yellow,
+        "primary": #409EFF,
+        "success": #67C23A,
+        "warning": #E6A23C,
+        "danger": #F56C6C,
+        "info": #909399
+);
+
+//1.字体颜色 
+
+// 透明色transparent
+.hs-child-color-transparent>.hs,
+.hs-color-transparent{
+    color: transparent
+}
+
+// 其它色
+@each $color_map_key, $color_map_val in $color_map {
+    .hs-child-color-#{$color_map_key}>.hs,
+    .hs-color-#{$color_map_key} {
+        color: $color_map_val;
+    }
+    //带透明度色
+    @for $alpha from 1 through 9 {
+        $alpha-index: calc($alpha / 10);
+        .hs-child-color-#{$color_map_key}-0#{$alpha}>.hs,
+        .hs-color-#{$color_map_key}-0#{$alpha} {
+            color: rgba($color_map_val, $alpha-index);
+        }
+    }
+}
+
+
+//2.背景色 
+
+// 透明色transparent
+.hs-background-color-transparent,
+.hs-child-background-color-transparent>.hs{
+    background-color: transparent
+}
+
+// 其它色
+@each $color_map_key, $color_map_val in $color_map {
+    .hs-child-background-color-#{$color_map_key}>.hs,
+    .hs-background-color-#{$color_map_key} {
+        background: $color_map_val;
+    }
+    //带透明度色
+    @for $alpha from 1 through 9 {
+        $alpha-index: calc($alpha / 10);
+        .hs-child-background-color-#{$color_map_key}-0#{$alpha}>.hs,
+        .hs-background-color-#{$color_map_key}-0#{$alpha} {
+            background: rgba($color_map_val, $alpha-index);
+        }
+    }
+}
+
+// 3.自定义主体颜色
+// 3.1 字体颜色
+.hs-child-color-user>.hs,
+.hs-color-user{
+    color: var(--hs-color)
+}
+
+// 3.2 背景颜色
+.hs-background-color-user,
+.hs-child-background-color-user>.hs{
+    background-color: var(--hs-background-color)
+}
+
+// 3.3 边框色
+.hs-border-color-user,
+.hs-child-border-color-user>.hs{
+    border-color: var(--hs-border-color)
+}

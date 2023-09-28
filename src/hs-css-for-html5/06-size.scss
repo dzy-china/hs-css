@@ -225,3 +225,31 @@ left;
 }
 
 
+// 视口宽高
+@for $i from 1 through 20 {
+    $per: $i * 5;
+    .hs-child-width-#{$per}-vh>*,
+    .hs-width-#{$per}-vh {
+        width: $per + vh;
+    }
+    .hs-child-min-width-#{$per}-vh>*,
+    .hs-min-width-#{$per}-vh {
+        min-width: $per + vh;
+    }
+    .hs-child-max-width-#{$per}-vh>*,
+    .hs-max-width-#{$per}-vh {
+        max-width: $per + vh;
+    }
+    .hs-child-height-#{$per}-vh>*,
+    .hs-height-#{$per}-vh {
+        height: $per + vh;
+    }
+    .hs-child-min-height-#{$per}-vh>*,
+    .hs-min-height-#{$per}-vh {
+        min-height: $per + vh;
+    }
+    .hs-child-max-height-#{$per}-vh>*,
+    .hs-max-height-#{$per}-vh {
+        max-height: $per + vh;
+    }
+}

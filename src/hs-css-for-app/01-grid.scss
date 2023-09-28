@@ -6,10 +6,10 @@
         display: table;
         clear: both;
     }
-    >* {
+    >.hs-list-box {
         display: block !important;
     }    
-    >*>* {
+    >.hs-list-box>.hs-list {
 		width:100%; //单列宽度
         float: left;
         box-sizing: border-box;
@@ -27,11 +27,11 @@ $marginGrade:6;
 @for $k from 1 through $marginGrade {
     $margin: getmargin($k);
     // 添加边距
-    .hs-list-col-gap-#{$margin}>*>* {
+    .hs-list-col-gap-#{$margin}>.hs-list-box>.hs-list {
         margin-right: #{$margin}px;
     }
      // 网格布局单元格空隙优化处理
-    .hs-list-col-gap-#{$margin}>* {
+    .hs-list-col-gap-#{$margin}>.hs-list-box {
         margin-right: -#{$margin}px;
     }
 }
@@ -40,19 +40,18 @@ $marginGrade:6;
 /* 列属性 */
 @for $col from 2 through 12 {
     //单元格基本列宽
-    .hs-list-col-#{$col}>*>* {
+    .hs-list-col-#{$col}>.hs-list-box>.hs-list {
         width: calc(100% / #{$col});
     }
     //单元格空隙
     @for $k from 1 through $marginGrade {
         $margin: getmargin($k);
-        .hs-list-col-#{$col}.hs-list-col-gap-#{$margin}>*>* {
+        .hs-list-col-#{$col}.hs-list-col-gap-#{$margin}>.hs-list-box>.hs-list {
             width: calc((100% - #{$col} * #{$margin}px) / #{$col});
         }
     }
     // 每行首个单元格清除浮动，防止float引起的错位
-    // n(0, 1, 2, 3, ...)
-    .hs-list-col-#{$col}>*>:nth-child(#{$col}n+1) {
+    .hs-list-col-#{$col}>.hs-list-box>.hs-list:nth-child(#{$col}n+1) { // n(0, 1, 2, 3, ...)
         clear: left;
     }
 }

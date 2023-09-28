@@ -1,8 +1,4 @@
-$primary-color: #333;
-body {
-  background-color: $primary-color;
+$per: 5;
+.hs-width{
+  width: $per + vh;
 }
-
-  .selector {
-    scale: calc(10 / 5);
-  }

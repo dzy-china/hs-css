@@ -5,7 +5,7 @@ center,
 right,
 justify;
 @each $text_align_val in $text_align_list {
-    .hs-child-text-align-#{$text_align_val}>*,
+    .hs-child-text-align-#{$text_align_val}>.hs,
     .hs-text-align-#{$text_align_val} {
         text-align: $text_align_val;
     }
@@ -13,14 +13,14 @@ justify;
 
 //2.文本缩进
 @for $i from 1 through 2 {
-    .hs-child-text-indent-#{$i}>*,
+    .hs-child-text-indent-#{$i}>.hs,
     .hs-text-indent-#{$i} {
         text-indent: $i + em;
     }
 }
 
 //3.字体加粗
-.hs-child-font-weight-bold>*,
+.hs-child-font-weight-bold>.hs,
 .hs-font-weight-bold {
     font-weight: bold;
 }
@@ -31,20 +31,20 @@ overline,
 line-through,
 none;
 @each $text_decoration_val in $text_decoration_list {
-    .hs-child-text-decoration-#{$text_decoration_val}>*,
+    .hs-child-text-decoration-#{$text_decoration_val}>.hs,
     .hs-text-decoration-#{$text_decoration_val} {
         text-decoration: $text_decoration_val;
     }
 }
 
 //5.文本超出元素宽度不换行
-.hs-child-white-space-nowrap>*,
+.hs-child-white-space-nowrap>.hs,
 .hs-white-space-nowrap {
     white-space: nowrap;
 }
 
 //6.溢出文本显示省略号
-[class*="hs-child-text-overflow-ellipsis-"]>*,
+[class*="hs-child-text-overflow-ellipsis-"]>.hs,
 [class*="hs-text-overflow-ellipsis-"]{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,7 +52,7 @@ none;
     -webkit-box-orient: vertical;
 }
 @for $k from 1 through 6 {
-    .hs-child-text-overflow-ellipsis-#{$k}>*,
+    .hs-child-text-overflow-ellipsis-#{$k}>.hs,
     .hs-text-overflow-ellipsis-#{$k} {
         -webkit-line-clamp: $k;
     }
@@ -61,7 +61,7 @@ none;
 //7.字体大小
 //整数字体[1-5]em
 @for $k from 1 through 5 {
-    .hs-child-font-size-#{$k}>*,
+    .hs-child-font-size-#{$k}>.hs,
     .hs-font-size-#{$k} {
         font-size: $k + em;
     }
@@ -71,7 +71,7 @@ none;
 @for $k from 1 through 4 {
     @for $j from 1 through 9 {
         $val: $k + calc($j / 10);
-        .hs-child-font-size-0#{$k}0#{$j}>*,
+        .hs-child-font-size-0#{$k}0#{$j}>.hs,
         .hs-font-size-0#{$k}0#{$j} {
             font-size: $val + em;
         }
@@ -81,13 +81,13 @@ none;
 //小数小字体[0.1-0.9]em
 @for $k from 1 through 9 {
     $val: calc($k / 10);
-    .hs-child-font-size-0#{$k}>*,
+    .hs-child-font-size-0#{$k}>.hs,
     .hs-font-size-0#{$k} {
         font-size: $val + em;
     }
 }
 //8.字体禁止选中
-    .hs-child-user-select-none>*,
+    .hs-child-user-select-none>.hs,
     .hs-user-select-none {
        -ms-user-select: none;
        -webkit-user-select: none;

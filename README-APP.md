@@ -239,21 +239,11 @@ hs-opacity-[01-09]
 hs-[text,box]-shadow-[0-1]-[0-1]-[5,10,15]-black-[01-03]
 hs-box-shadow-inset-[0-1]-[0-1]-[5,10,15]-black-[01-03]
 ```
-#### 7.5、鼠标形状
-``` css
-hs-cursor-[default,pointer,not-allowed]
-```
-#### 7.6、全屏半透明遮罩
+#### 7.5、全屏半透明遮罩
 ``` css
 hs-screen-shade-box
 ```
-#### 7.7、滚动条
-> 代替浏览器默认滚动条
-``` css
-hs-scrollbar
-```
-
-#### 7.8、图片滤镜
+#### 7.6、图片滤镜
 
 ``` css
 hs-filter-grayscale-00100; /* 褪色效果为100% */
@@ -265,20 +255,20 @@ hs-filter-grayscale-00100; /* 褪色效果为100% */
 
 #### 8.1、字体颜色
 ``` css
-hs-[hover]-color-transparent
-hs-[hover]-color-[black, blue, gray, green, red, white, yellow,primary,success,warning,danger,info]-[01-09]
+hs-color-transparent
+hs-color-[black, blue, gray, green, red, white, yellow,primary,success,warning,danger,info]-[01-09]
 ```
 #### 8.2、背景色
 ``` css
-hs-[hover]-background-color-transparent
-hs-[hover]-background-color-[black, blue, gray, green, red, white, yellow,primary,success,warning,danger,info]-[01-09]
+hs-background-color-transparent
+hs-background-color-[black, blue, gray, green, red, white, yellow,primary,success,warning,danger,info]-[01-09]
 ```
 #### 8.3、自定义用户颜色
 ``` css
-hs-[hover]-color-user  字体颜色, 依赖用户颜色变量：--hs-color
-hs-[hover]-background-color-user  背景颜色, 依赖用户颜色变量：--hs-background-color
-hs-[hover]-border-color-user  边框色, 依赖用户颜色变量：--hs-border-color
-hs-[hover]-placeholder-color-user  输入框 placeholder 色, 依赖用户颜色变量：--hs-placeholder-color
+hs-color-user  字体颜色, 依赖用户颜色变量：--hs-color
+hs-background-color-user  背景颜色, 依赖用户颜色变量：--hs-background-color
+hs-border-color-user  边框色, 依赖用户颜色变量：--hs-border-color
+hs-placeholder-color-user  输入框 placeholder 色, 依赖用户颜色变量：--hs-placeholder-color
 ```
 **示例：**
 **用户自定义颜色：**

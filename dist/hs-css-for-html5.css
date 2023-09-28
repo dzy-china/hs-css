@@ -1,20 +1,7 @@
 @charset "UTF-8";
 .hs-child-ini > *,
 .hs-ini {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  color: inherit;
-  text-decoration: none;
-  list-style: none;
-  border-collapse: collapse;
-  vertical-align: top;
-  border: 0;
-  font-weight: 400;
-  font-size: inherit;
-  font-style: normal;
-  appearance: none;
-  -webkit-appearance: none;
+  all: unset;
 }
 
 body.hs-ini,
@@ -451,16 +438,26 @@ html.hs-ini {
 
 [class*=hs-child-row-] > *,
 [class*=hs-row-] {
-  -webkit-display: flex;
   display: flex;
   flex-direction: row;
 }
 
 [class*=hs-child-col-] > *,
 [class*=hs-col-] {
-  -webkit-display: flex;
   display: flex;
   flex-direction: column;
+}
+
+[class*=hs-child-row-reverse] > *,
+[class*=hs-row-reverse] {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+[class*=hs-child-col-reverse] > *,
+[class*=hs-col-reverse] {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .hs-child-row-start-start > *,
@@ -964,12 +961,42 @@ html.hs-ini {
   white-space: nowrap;
 }
 
-.hs-child-text-overflow-ellipsis > *,
-.hs-text-overflow-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
+[class*=hs-child-text-overflow-ellipsis-] > *,
+[class*=hs-text-overflow-ellipsis-] {
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.hs-child-text-overflow-ellipsis-1 > *,
+.hs-text-overflow-ellipsis-1 {
+  -webkit-line-clamp: 1;
+}
+
+.hs-child-text-overflow-ellipsis-2 > *,
+.hs-text-overflow-ellipsis-2 {
+  -webkit-line-clamp: 2;
+}
+
+.hs-child-text-overflow-ellipsis-3 > *,
+.hs-text-overflow-ellipsis-3 {
+  -webkit-line-clamp: 3;
+}
+
+.hs-child-text-overflow-ellipsis-4 > *,
+.hs-text-overflow-ellipsis-4 {
+  -webkit-line-clamp: 4;
+}
+
+.hs-child-text-overflow-ellipsis-5 > *,
+.hs-text-overflow-ellipsis-5 {
+  -webkit-line-clamp: 5;
+}
+
+.hs-child-text-overflow-ellipsis-6 > *,
+.hs-text-overflow-ellipsis-6 {
+  -webkit-line-clamp: 6;
 }
 
 .hs-child-font-size-1 > *,
@@ -11271,6 +11298,606 @@ html.hs-ini {
 .hs-child-height-0 > *,
 .hs-height-0 {
   height: 0;
+}
+
+.hs-child-width-5-vh > *,
+.hs-width-5-vh {
+  width: 5vh;
+}
+
+.hs-child-min-width-5-vh > *,
+.hs-min-width-5-vh {
+  min-width: 5vh;
+}
+
+.hs-child-max-width-5-vh > *,
+.hs-max-width-5-vh {
+  max-width: 5vh;
+}
+
+.hs-child-height-5-vh > *,
+.hs-height-5-vh {
+  height: 5vh;
+}
+
+.hs-child-min-height-5-vh > *,
+.hs-min-height-5-vh {
+  min-height: 5vh;
+}
+
+.hs-child-max-height-5-vh > *,
+.hs-max-height-5-vh {
+  max-height: 5vh;
+}
+
+.hs-child-width-10-vh > *,
+.hs-width-10-vh {
+  width: 10vh;
+}
+
+.hs-child-min-width-10-vh > *,
+.hs-min-width-10-vh {
+  min-width: 10vh;
+}
+
+.hs-child-max-width-10-vh > *,
+.hs-max-width-10-vh {
+  max-width: 10vh;
+}
+
+.hs-child-height-10-vh > *,
+.hs-height-10-vh {
+  height: 10vh;
+}
+
+.hs-child-min-height-10-vh > *,
+.hs-min-height-10-vh {
+  min-height: 10vh;
+}
+
+.hs-child-max-height-10-vh > *,
+.hs-max-height-10-vh {
+  max-height: 10vh;
+}
+
+.hs-child-width-15-vh > *,
+.hs-width-15-vh {
+  width: 15vh;
+}
+
+.hs-child-min-width-15-vh > *,
+.hs-min-width-15-vh {
+  min-width: 15vh;
+}
+
+.hs-child-max-width-15-vh > *,
+.hs-max-width-15-vh {
+  max-width: 15vh;
+}
+
+.hs-child-height-15-vh > *,
+.hs-height-15-vh {
+  height: 15vh;
+}
+
+.hs-child-min-height-15-vh > *,
+.hs-min-height-15-vh {
+  min-height: 15vh;
+}
+
+.hs-child-max-height-15-vh > *,
+.hs-max-height-15-vh {
+  max-height: 15vh;
+}
+
+.hs-child-width-20-vh > *,
+.hs-width-20-vh {
+  width: 20vh;
+}
+
+.hs-child-min-width-20-vh > *,
+.hs-min-width-20-vh {
+  min-width: 20vh;
+}
+
+.hs-child-max-width-20-vh > *,
+.hs-max-width-20-vh {
+  max-width: 20vh;
+}
+
+.hs-child-height-20-vh > *,
+.hs-height-20-vh {
+  height: 20vh;
+}
+
+.hs-child-min-height-20-vh > *,
+.hs-min-height-20-vh {
+  min-height: 20vh;
+}
+
+.hs-child-max-height-20-vh > *,
+.hs-max-height-20-vh {
+  max-height: 20vh;
+}
+
+.hs-child-width-25-vh > *,
+.hs-width-25-vh {
+  width: 25vh;
+}
+
+.hs-child-min-width-25-vh > *,
+.hs-min-width-25-vh {
+  min-width: 25vh;
+}
+
+.hs-child-max-width-25-vh > *,
+.hs-max-width-25-vh {
+  max-width: 25vh;
+}
+
+.hs-child-height-25-vh > *,
+.hs-height-25-vh {
+  height: 25vh;
+}
+
+.hs-child-min-height-25-vh > *,
+.hs-min-height-25-vh {
+  min-height: 25vh;
+}
+
+.hs-child-max-height-25-vh > *,
+.hs-max-height-25-vh {
+  max-height: 25vh;
+}
+
+.hs-child-width-30-vh > *,
+.hs-width-30-vh {
+  width: 30vh;
+}
+
+.hs-child-min-width-30-vh > *,
+.hs-min-width-30-vh {
+  min-width: 30vh;
+}
+
+.hs-child-max-width-30-vh > *,
+.hs-max-width-30-vh {
+  max-width: 30vh;
+}
+
+.hs-child-height-30-vh > *,
+.hs-height-30-vh {
+  height: 30vh;
+}
+
+.hs-child-min-height-30-vh > *,
+.hs-min-height-30-vh {
+  min-height: 30vh;
+}
+
+.hs-child-max-height-30-vh > *,
+.hs-max-height-30-vh {
+  max-height: 30vh;
+}
+
+.hs-child-width-35-vh > *,
+.hs-width-35-vh {
+  width: 35vh;
+}
+
+.hs-child-min-width-35-vh > *,
+.hs-min-width-35-vh {
+  min-width: 35vh;
+}
+
+.hs-child-max-width-35-vh > *,
+.hs-max-width-35-vh {
+  max-width: 35vh;
+}
+
+.hs-child-height-35-vh > *,
+.hs-height-35-vh {
+  height: 35vh;
+}
+
+.hs-child-min-height-35-vh > *,
+.hs-min-height-35-vh {
+  min-height: 35vh;
+}
+
+.hs-child-max-height-35-vh > *,
+.hs-max-height-35-vh {
+  max-height: 35vh;
+}
+
+.hs-child-width-40-vh > *,
+.hs-width-40-vh {
+  width: 40vh;
+}
+
+.hs-child-min-width-40-vh > *,
+.hs-min-width-40-vh {
+  min-width: 40vh;
+}
+
+.hs-child-max-width-40-vh > *,
+.hs-max-width-40-vh {
+  max-width: 40vh;
+}
+
+.hs-child-height-40-vh > *,
+.hs-height-40-vh {
+  height: 40vh;
+}
+
+.hs-child-min-height-40-vh > *,
+.hs-min-height-40-vh {
+  min-height: 40vh;
+}
+
+.hs-child-max-height-40-vh > *,
+.hs-max-height-40-vh {
+  max-height: 40vh;
+}
+
+.hs-child-width-45-vh > *,
+.hs-width-45-vh {
+  width: 45vh;
+}
+
+.hs-child-min-width-45-vh > *,
+.hs-min-width-45-vh {
+  min-width: 45vh;
+}
+
+.hs-child-max-width-45-vh > *,
+.hs-max-width-45-vh {
+  max-width: 45vh;
+}
+
+.hs-child-height-45-vh > *,
+.hs-height-45-vh {
+  height: 45vh;
+}
+
+.hs-child-min-height-45-vh > *,
+.hs-min-height-45-vh {
+  min-height: 45vh;
+}
+
+.hs-child-max-height-45-vh > *,
+.hs-max-height-45-vh {
+  max-height: 45vh;
+}
+
+.hs-child-width-50-vh > *,
+.hs-width-50-vh {
+  width: 50vh;
+}
+
+.hs-child-min-width-50-vh > *,
+.hs-min-width-50-vh {
+  min-width: 50vh;
+}
+
+.hs-child-max-width-50-vh > *,
+.hs-max-width-50-vh {
+  max-width: 50vh;
+}
+
+.hs-child-height-50-vh > *,
+.hs-height-50-vh {
+  height: 50vh;
+}
+
+.hs-child-min-height-50-vh > *,
+.hs-min-height-50-vh {
+  min-height: 50vh;
+}
+
+.hs-child-max-height-50-vh > *,
+.hs-max-height-50-vh {
+  max-height: 50vh;
+}
+
+.hs-child-width-55-vh > *,
+.hs-width-55-vh {
+  width: 55vh;
+}
+
+.hs-child-min-width-55-vh > *,
+.hs-min-width-55-vh {
+  min-width: 55vh;
+}
+
+.hs-child-max-width-55-vh > *,
+.hs-max-width-55-vh {
+  max-width: 55vh;
+}
+
+.hs-child-height-55-vh > *,
+.hs-height-55-vh {
+  height: 55vh;
+}
+
+.hs-child-min-height-55-vh > *,
+.hs-min-height-55-vh {
+  min-height: 55vh;
+}
+
+.hs-child-max-height-55-vh > *,
+.hs-max-height-55-vh {
+  max-height: 55vh;
+}
+
+.hs-child-width-60-vh > *,
+.hs-width-60-vh {
+  width: 60vh;
+}
+
+.hs-child-min-width-60-vh > *,
+.hs-min-width-60-vh {
+  min-width: 60vh;
+}
+
+.hs-child-max-width-60-vh > *,
+.hs-max-width-60-vh {
+  max-width: 60vh;
+}
+
+.hs-child-height-60-vh > *,
+.hs-height-60-vh {
+  height: 60vh;
+}
+
+.hs-child-min-height-60-vh > *,
+.hs-min-height-60-vh {
+  min-height: 60vh;
+}
+
+.hs-child-max-height-60-vh > *,
+.hs-max-height-60-vh {
+  max-height: 60vh;
+}
+
+.hs-child-width-65-vh > *,
+.hs-width-65-vh {
+  width: 65vh;
+}
+
+.hs-child-min-width-65-vh > *,
+.hs-min-width-65-vh {
+  min-width: 65vh;
+}
+
+.hs-child-max-width-65-vh > *,
+.hs-max-width-65-vh {
+  max-width: 65vh;
+}
+
+.hs-child-height-65-vh > *,
+.hs-height-65-vh {
+  height: 65vh;
+}
+
+.hs-child-min-height-65-vh > *,
+.hs-min-height-65-vh {
+  min-height: 65vh;
+}
+
+.hs-child-max-height-65-vh > *,
+.hs-max-height-65-vh {
+  max-height: 65vh;
+}
+
+.hs-child-width-70-vh > *,
+.hs-width-70-vh {
+  width: 70vh;
+}
+
+.hs-child-min-width-70-vh > *,
+.hs-min-width-70-vh {
+  min-width: 70vh;
+}
+
+.hs-child-max-width-70-vh > *,
+.hs-max-width-70-vh {
+  max-width: 70vh;
+}
+
+.hs-child-height-70-vh > *,
+.hs-height-70-vh {
+  height: 70vh;
+}
+
+.hs-child-min-height-70-vh > *,
+.hs-min-height-70-vh {
+  min-height: 70vh;
+}
+
+.hs-child-max-height-70-vh > *,
+.hs-max-height-70-vh {
+  max-height: 70vh;
+}
+
+.hs-child-width-75-vh > *,
+.hs-width-75-vh {
+  width: 75vh;
+}
+
+.hs-child-min-width-75-vh > *,
+.hs-min-width-75-vh {
+  min-width: 75vh;
+}
+
+.hs-child-max-width-75-vh > *,
+.hs-max-width-75-vh {
+  max-width: 75vh;
+}
+
+.hs-child-height-75-vh > *,
+.hs-height-75-vh {
+  height: 75vh;
+}
+
+.hs-child-min-height-75-vh > *,
+.hs-min-height-75-vh {
+  min-height: 75vh;
+}
+
+.hs-child-max-height-75-vh > *,
+.hs-max-height-75-vh {
+  max-height: 75vh;
+}
+
+.hs-child-width-80-vh > *,
+.hs-width-80-vh {
+  width: 80vh;
+}
+
+.hs-child-min-width-80-vh > *,
+.hs-min-width-80-vh {
+  min-width: 80vh;
+}
+
+.hs-child-max-width-80-vh > *,
+.hs-max-width-80-vh {
+  max-width: 80vh;
+}
+
+.hs-child-height-80-vh > *,
+.hs-height-80-vh {
+  height: 80vh;
+}
+
+.hs-child-min-height-80-vh > *,
+.hs-min-height-80-vh {
+  min-height: 80vh;
+}
+
+.hs-child-max-height-80-vh > *,
+.hs-max-height-80-vh {
+  max-height: 80vh;
+}
+
+.hs-child-width-85-vh > *,
+.hs-width-85-vh {
+  width: 85vh;
+}
+
+.hs-child-min-width-85-vh > *,
+.hs-min-width-85-vh {
+  min-width: 85vh;
+}
+
+.hs-child-max-width-85-vh > *,
+.hs-max-width-85-vh {
+  max-width: 85vh;
+}
+
+.hs-child-height-85-vh > *,
+.hs-height-85-vh {
+  height: 85vh;
+}
+
+.hs-child-min-height-85-vh > *,
+.hs-min-height-85-vh {
+  min-height: 85vh;
+}
+
+.hs-child-max-height-85-vh > *,
+.hs-max-height-85-vh {
+  max-height: 85vh;
+}
+
+.hs-child-width-90-vh > *,
+.hs-width-90-vh {
+  width: 90vh;
+}
+
+.hs-child-min-width-90-vh > *,
+.hs-min-width-90-vh {
+  min-width: 90vh;
+}
+
+.hs-child-max-width-90-vh > *,
+.hs-max-width-90-vh {
+  max-width: 90vh;
+}
+
+.hs-child-height-90-vh > *,
+.hs-height-90-vh {
+  height: 90vh;
+}
+
+.hs-child-min-height-90-vh > *,
+.hs-min-height-90-vh {
+  min-height: 90vh;
+}
+
+.hs-child-max-height-90-vh > *,
+.hs-max-height-90-vh {
+  max-height: 90vh;
+}
+
+.hs-child-width-95-vh > *,
+.hs-width-95-vh {
+  width: 95vh;
+}
+
+.hs-child-min-width-95-vh > *,
+.hs-min-width-95-vh {
+  min-width: 95vh;
+}
+
+.hs-child-max-width-95-vh > *,
+.hs-max-width-95-vh {
+  max-width: 95vh;
+}
+
+.hs-child-height-95-vh > *,
+.hs-height-95-vh {
+  height: 95vh;
+}
+
+.hs-child-min-height-95-vh > *,
+.hs-min-height-95-vh {
+  min-height: 95vh;
+}
+
+.hs-child-max-height-95-vh > *,
+.hs-max-height-95-vh {
+  max-height: 95vh;
+}
+
+.hs-child-width-100-vh > *,
+.hs-width-100-vh {
+  width: 100vh;
+}
+
+.hs-child-min-width-100-vh > *,
+.hs-min-width-100-vh {
+  min-width: 100vh;
+}
+
+.hs-child-max-width-100-vh > *,
+.hs-max-width-100-vh {
+  max-width: 100vh;
+}
+
+.hs-child-height-100-vh > *,
+.hs-height-100-vh {
+  height: 100vh;
+}
+
+.hs-child-min-height-100-vh > *,
+.hs-min-height-100-vh {
+  min-height: 100vh;
+}
+
+.hs-child-max-height-100-vh > *,
+.hs-max-height-100-vh {
+  max-height: 100vh;
 }
 
 .hs-child-border-radius-00100 > *,

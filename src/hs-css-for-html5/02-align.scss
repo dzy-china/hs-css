@@ -1,17 +1,26 @@
 // 1.flex对齐 v2
 [class*="hs-child-row-"]>*,
 [class*="hs-row-"] {
-    -webkit-display: flex;
     display: flex;
     flex-direction: row;
 }
-
 [class*="hs-child-col-"]>*,
 [class*="hs-col-"] {
-    -webkit-display: flex;
     display: flex;
     flex-direction: column;
 } 
+
+[class*="hs-child-row-reverse"]>*,
+[class*="hs-row-reverse"] {
+    display: flex;
+    flex-direction: row-reverse;
+}
+[class*="hs-child-col-reverse"]>*,
+[class*="hs-col-reverse"] {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 
 //主轴"对齐方式"值映射
 $justify_content_map: (
