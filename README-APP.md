@@ -3,27 +3,30 @@
 > 2. 00开头代表百分号
 > 3. 数字(包括0)代表实际值，如未特别说明，单位均为px
 > 4. 数字步长，如未特别说明，默认均为5
+> 5. 以hs-child-开头表示作用于全部子元素，但是每个子元素必须写上类名hs
 
 ### 一、网格布局
 **1.1、类参数说明：**
 
 ``` css
-hs-list-col-[2-12] 网格式布局基类，步长1
-hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-12]类同级
+hs-list-col-[2-12] 网格式布局基类，步长1， 必须
+hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-12]类同级，可选
+hs-list-box 子列表的父元素，必须
+hs-list 每个子列表，必须
 ```
 
 **1.2、示例：**
 
 ``` html 
-<div class="hs hs-list-col-3 hs-list-col-gap-15">
-	<ul>
-		<li>
+<div class="hs-list-col-3 hs-list-col-gap-15">
+	<ul class="hs-list-box">
+		<li class="hs-list">
 			单元格1
 		</li>
-		<li>
+		<li class="hs-list">
 			单元格2
 		</li>
-		<li>
+		<li class="hs-list">
 			单元格3
 		</li>
 	</ul>

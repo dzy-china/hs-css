@@ -16,7 +16,7 @@ hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-
 **1.2、示例：**
 
 ``` html 
-<div class="hs hs-list-col-3 hs-list-col-gap-15">
+<div class="hs-list-col-3 hs-list-col-gap-15">
 	<ul>
 		<li>
 			单元格1
