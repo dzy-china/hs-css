@@ -9,11 +9,13 @@
 **1.1、类参数说明：**
 
 ``` css
-hs-list-col-[2-12] 网格式布局基类，步长1
-hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-12]类同级
+hs-list-col-[2-12] 网格式布局基类，步长1，必须
+hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-12]类同级，可选
 ```
 
 **1.2、示例：**
+
+> 注：单元格外层必须存在一个父元素
 
 ``` html 
 <div class="hs-list-col-3 hs-list-col-gap-15">
@@ -34,6 +36,7 @@ hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-
 ### 二、对齐
 #### 2.1、flex对齐方式
 **2.1.1、基础语法**
+
 ``` css
 hs-[row,col]-[start,center,end,between,around]-[start,center,end,stretch,baseline]
 hs-[row-reverse,col-reverse]
@@ -63,7 +66,7 @@ hs-[row-reverse,col-reverse]
 	<div >
 		子元素2
 	</div>
-	</div>
+</div>
 ```
 #### 2.2、垂直对齐类
 > 注：主要用于table的单元格元素
