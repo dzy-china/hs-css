@@ -5,7 +5,7 @@ right,
 bottom,
 left;
 //左右自动边距
-.hs-child-margin-auto>[class*="hs-"],
+.hs-child-margin-auto>.hs,
 .hs-margin-auto {
     margin: 0 auto;
 }
@@ -14,22 +14,22 @@ left;
 @for $k from 1 through 20 {
     $margin: $k * 5;
     //四边外边距
-    .hs-child-margin-#{$margin}>[class*="hs-"],
+    .hs-child-margin-#{$margin}>.hs,
     .hs-margin-#{$margin} {
         margin: $margin + px;
     }
      //四边内边距
-    .hs-child-padding-#{$margin}>[class*="hs-"],
+    .hs-child-padding-#{$margin}>.hs,
     .hs-padding-#{$margin} {
         padding: $margin + px;
     }
     //内边距(双边,由于此样式用时频率较高，故特加上)
-    .hs-child-padding-left-right-#{$margin}>[class*="hs-"],
+    .hs-child-padding-left-right-#{$margin}>.hs,
     .hs-padding-left-right-#{$margin} {
         padding-left:$margin + px;
         padding-right:$margin + px;
     }
-    .hs-child-padding-top-bottom-#{$margin}>[class*="hs-"],
+    .hs-child-padding-top-bottom-#{$margin}>.hs,
     .hs-padding-top-bottom-#{$margin} {
         padding-top:$margin + px;
         padding-bottom:$margin + px;
@@ -37,25 +37,25 @@ left;
      //单边设置
     @each $direction_val in $direction_list {
         //定位边距
-        .hs-child-#{$direction_val}-#{$margin}>[class*="hs-"],
+        .hs-child-#{$direction_val}-#{$margin}>.hs,
         .hs-#{$direction_val}-#{$margin} {
             #{$direction_val}: $margin + px;
         }
-        .hs-child-#{$direction_val}--#{$margin}>[class*="hs-"],
+        .hs-child-#{$direction_val}--#{$margin}>.hs,
         .hs-#{$direction_val}--#{$margin} {
             #{$direction_val}: - $margin + px;
         }
         //外边距
-        .hs-child-margin-#{$direction_val}-#{$margin}>[class*="hs-"],
+        .hs-child-margin-#{$direction_val}-#{$margin}>.hs,
         .hs-margin-#{$direction_val}-#{$margin} {
             margin-#{$direction_val}: $margin + px;
         }
-        .hs-child-margin-#{$direction_val}--#{$margin}>[class*="hs-"],
+        .hs-child-margin-#{$direction_val}--#{$margin}>.hs,
         .hs-margin-#{$direction_val}--#{$margin} {
             margin-#{$direction_val}: - $margin + px;
         }
           //内边距
-        .hs-child-padding-#{$direction_val}-#{$margin}>[class*="hs-"],
+        .hs-child-padding-#{$direction_val}-#{$margin}>.hs,
         .hs-padding-#{$direction_val}-#{$margin} {
             padding-#{$direction_val}: $margin + px;
         }
@@ -67,11 +67,11 @@ left;
 @for $i from 1 through 20 {
     $per: $i * 5;     
     @each $direction_val in $direction_list {
-        .hs-child-#{$direction_val}-00#{$per}>[class*="hs-"],
+        .hs-child-#{$direction_val}-00#{$per}>.hs,
         .hs-#{$direction_val}-00#{$per} {
             #{$direction_val}: $per * 1%;
         }
-        .hs-child-#{$direction_val}--00#{$per}>[class*="hs-"],
+        .hs-child-#{$direction_val}--00#{$per}>.hs,
         .hs-#{$direction_val}--00#{$per} {
             #{$direction_val}: - $per * 1%;
         }
@@ -81,22 +81,22 @@ left;
 //微边距[1-4]px
 @for $i from 1 through 4 {
      //四边外边距
-    .hs-child-margin-#{$i}>[class*="hs-"],
+    .hs-child-margin-#{$i}>.hs,
     .hs-margin-#{$i} {
         margin: $i + px;
     }
     //四边内边距
-    .hs-child-padding-#{$i}>[class*="hs-"],
+    .hs-child-padding-#{$i}>.hs,
     .hs-padding-#{$i} {
         padding: $i + px;
     }
     //内边距(双边,由于此样式用时频率较高，故特加上)
-    .hs-child-padding-left-right-#{$i}>[class*="hs-"],
+    .hs-child-padding-left-right-#{$i}>.hs,
     .hs-padding-left-right-#{$i} {
         padding-left:$i + px;
         padding-right:$i + px;
     }
-    .hs-child-padding-top-bottom-#{$i}>[class*="hs-"],
+    .hs-child-padding-top-bottom-#{$i}>.hs,
     .hs-padding-top-bottom-#{$i} {
         padding-top:$i + px;
         padding-bottom:$i + px;
@@ -104,25 +104,25 @@ left;
     //单边设置
     @each $direction_val in $direction_list {
         //定位微边距
-        .hs-child-#{$direction_val}-#{$i}>[class*="hs-"],
+        .hs-child-#{$direction_val}-#{$i}>.hs,
         .hs-#{$direction_val}-#{$i} {
             #{$direction_val}: $i + px;
         }
-        .hs-child-#{$direction_val}--#{$i}>[class*="hs-"],
+        .hs-child-#{$direction_val}--#{$i}>.hs,
         .hs-#{$direction_val}--#{$i} {
             #{$direction_val}: -$i + px;
         }
         //外边距微边距
-        .hs-child-margin-#{$direction_val}-#{$i}>[class*="hs-"],
+        .hs-child-margin-#{$direction_val}-#{$i}>.hs,
         .hs-margin-#{$direction_val}-#{$i} {
             margin-#{$direction_val}: $i + px;
         }
-        .hs-child-margin-#{$direction_val}--#{$i}>[class*="hs-"],
+        .hs-child-margin-#{$direction_val}--#{$i}>.hs,
         .hs-margin-#{$direction_val}--#{$i} {
             margin-#{$direction_val}: -$i + px;
         }
         //内边距微边距 
-        .hs-child-padding-#{$direction_val}-#{$i}>[class*="hs-"],
+        .hs-child-padding-#{$direction_val}-#{$i}>.hs,
         .hs-padding-#{$direction_val}-#{$i} {
             padding-#{$direction_val}: $i + px;
         }
@@ -130,7 +130,7 @@ left;
 }
 //定位0边距0px
 @each $direction_val in $direction_list {
-    .hs-child-#{$direction_val}-0>[class*="hs-"],
+    .hs-child-#{$direction_val}-0>.hs,
     .hs-#{$direction_val}-0 {
         #{$direction_val}: 0;
     }
@@ -140,15 +140,15 @@ left;
 // 非0宽高
 @for $i from 1 through 240 {
     $size: $i * 5;
-    .hs-child-width-#{$size}>[class*="hs-"],
+    .hs-child-width-#{$size}>.hs,
     .hs-width-#{$size} {
         width: $size + px;
     }
-    .hs-child-min-width-#{$size}>[class*="hs-"],
+    .hs-child-min-width-#{$size}>.hs,
     .hs-min-width-#{$size} {
         min-width: $size + px;
     }
-    .hs-child-max-width-#{$size}>[class*="hs-"],
+    .hs-child-max-width-#{$size}>.hs,
     .hs-max-width-#{$size} {
         max-width: $size + px;
     }
@@ -156,19 +156,19 @@ left;
 
 @for $i from 1 through 100 {
     $size: $i * 5;
-    .hs-child-height-#{$size}>[class*="hs-"],
+    .hs-child-height-#{$size}>.hs,
     .hs-height-#{$size} {
         height: $size + px;
     }
-    .hs-child-min-height-#{$size}>[class*="hs-"],
+    .hs-child-min-height-#{$size}>.hs,
     .hs-min-height-#{$size} {
         min-height: $size + px;
     }
-    .hs-child-max-height-#{$size}>[class*="hs-"],
+    .hs-child-max-height-#{$size}>.hs,
     .hs-max-height-#{$size} {
         max-height: $size + px;
     }
-    .hs-child-line-height-#{$size}>[class*="hs-"],
+    .hs-child-line-height-#{$size}>.hs,
     .hs-line-height-#{$size} {
         line-height: $size + px;
     }
@@ -177,49 +177,49 @@ left;
 //百分比宽高
 @for $i from 1 through 20 {
     $per: $i * 5;
-    .hs-child-width-00#{$per}>[class*="hs-"],
+    .hs-child-width-00#{$per}>.hs,
     .hs-width-00#{$per} {
         width: $per * 1%;
     }
-    .hs-child-min-width-00#{$per}>[class*="hs-"],
+    .hs-child-min-width-00#{$per}>.hs,
     .hs-min-width-00#{$per} {
         min-width: $per * 1%;
     }
-    .hs-child-max-width-00#{$per}>[class*="hs-"],
+    .hs-child-max-width-00#{$per}>.hs,
     .hs-max-width-00#{$per} {
         max-width: $per * 1%;
     }
-    .hs-child-height-00#{$per}>[class*="hs-"],
+    .hs-child-height-00#{$per}>.hs,
     .hs-height-00#{$per} {
         height: $per * 1%;
     }
-    .hs-child-min-height-00#{$per}>[class*="hs-"],
+    .hs-child-min-height-00#{$per}>.hs,
     .hs-min-height-00#{$per} {
         min-height: $per * 1%;
     }
-    .hs-child-max-height-00#{$per}>[class*="hs-"],
+    .hs-child-max-height-00#{$per}>.hs,
     .hs-max-height-00#{$per} {
         max-height: $per * 1%;
     }
 }
 //微宽高[1-4]px
 @for $i from 1 through 4 {
-    .hs-child-width-#{$i}>[class*="hs-"],
+    .hs-child-width-#{$i}>.hs,
     .hs-width-#{$i} {
         width: $i + px;
     }
-    .hs-child-height-#{$i}>[class*="hs-"],
+    .hs-child-height-#{$i}>.hs,
     .hs-height-#{$i} {
         height: $i + px;
     }
 }
 
 // 0宽高
-.hs-child-width-0>[class*="hs-"],
+.hs-child-width-0>.hs,
 .hs-width-0 {
     width: 0;
 }
-.hs-child-height-0>[class*="hs-"],
+.hs-child-height-0>.hs,
 .hs-height-0 {
     height: 0;
 }
@@ -227,27 +227,27 @@ left;
 // 视口宽高
 @for $i from 1 through 20 {
     $per: $i * 5;
-    .hs-child-width-#{$per}-vh>[class*="hs-"],
+    .hs-child-width-#{$per}-vh>.hs,
     .hs-width-#{$per}-vh {
         width: $per + vh;
     }
-    .hs-child-min-width-#{$per}-vh>[class*="hs-"],
+    .hs-child-min-width-#{$per}-vh>.hs,
     .hs-min-width-#{$per}-vh {
         min-width: $per + vh;
     }
-    .hs-child-max-width-#{$per}-vh>[class*="hs-"],
+    .hs-child-max-width-#{$per}-vh>.hs,
     .hs-max-width-#{$per}-vh {
         max-width: $per + vh;
     }
-    .hs-child-height-#{$per}-vh>[class*="hs-"],
+    .hs-child-height-#{$per}-vh>.hs,
     .hs-height-#{$per}-vh {
         height: $per + vh;
     }
-    .hs-child-min-height-#{$per}-vh>[class*="hs-"],
+    .hs-child-min-height-#{$per}-vh>.hs,
     .hs-min-height-#{$per}-vh {
         min-height: $per + vh;
     }
-    .hs-child-max-height-#{$per}-vh>[class*="hs-"],
+    .hs-child-max-height-#{$per}-vh>.hs,
     .hs-max-height-#{$per}-vh {
         max-height: $per + vh;
     }
