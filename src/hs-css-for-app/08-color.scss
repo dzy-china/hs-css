@@ -17,21 +17,21 @@ $color_map:(
 //1.字体颜色 
 
 // 透明色transparent
-.hs-child-color-transparent>.hs,
+.hs-child-color-transparent>[class*="hs-"],
 .hs-color-transparent{
     color: transparent
 }
 
 // 其它色
 @each $color_map_key, $color_map_val in $color_map {
-    .hs-child-color-#{$color_map_key}>.hs,
+    .hs-child-color-#{$color_map_key}>[class*="hs-"],
     .hs-color-#{$color_map_key} {
         color: $color_map_val;
     }
     //带透明度色
     @for $alpha from 1 through 9 {
         $alpha-index: calc($alpha / 10);
-        .hs-child-color-#{$color_map_key}-0#{$alpha}>.hs,
+        .hs-child-color-#{$color_map_key}-0#{$alpha}>[class*="hs-"],
         .hs-color-#{$color_map_key}-0#{$alpha} {
             color: rgba($color_map_val, $alpha-index);
         }
@@ -43,20 +43,20 @@ $color_map:(
 
 // 透明色transparent
 .hs-background-color-transparent,
-.hs-child-background-color-transparent>.hs{
+.hs-child-background-color-transparent>[class*="hs-"]{
     background-color: transparent
 }
 
 // 其它色
 @each $color_map_key, $color_map_val in $color_map {
-    .hs-child-background-color-#{$color_map_key}>.hs,
+    .hs-child-background-color-#{$color_map_key}>[class*="hs-"],
     .hs-background-color-#{$color_map_key} {
         background: $color_map_val;
     }
     //带透明度色
     @for $alpha from 1 through 9 {
         $alpha-index: calc($alpha / 10);
-        .hs-child-background-color-#{$color_map_key}-0#{$alpha}>.hs,
+        .hs-child-background-color-#{$color_map_key}-0#{$alpha}>[class*="hs-"],
         .hs-background-color-#{$color_map_key}-0#{$alpha} {
             background: rgba($color_map_val, $alpha-index);
         }
@@ -65,19 +65,19 @@ $color_map:(
 
 // 3.自定义主体颜色
 // 3.1 字体颜色
-.hs-child-color-user>.hs,
+.hs-child-color-user>[class*="hs-"],
 .hs-color-user{
     color: var(--hs-color)
 }
 
 // 3.2 背景颜色
 .hs-background-color-user,
-.hs-child-background-color-user>.hs{
+.hs-child-background-color-user>[class*="hs-"]{
     background-color: var(--hs-background-color)
 }
 
 // 3.3 边框色
 .hs-border-color-user,
-.hs-child-border-color-user>.hs{
+.hs-child-border-color-user>[class*="hs-"]{
     border-color: var(--hs-border-color)
 }

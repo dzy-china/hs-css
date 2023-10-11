@@ -1,28 +1,28 @@
 //1.圆角 
-.hs-child-border-radius-00100>.hs,
+.hs-child-border-radius-00100>[class*="hs-"],
 .hs-border-radius-00100 {
     border-radius: 100%;
 }
 
 @for $i from 1 through 3 {
     $size: $i * 5;
-    .hs-child-border-radius-#{$size}>.hs,
+    .hs-child-border-radius-#{$size}>[class*="hs-"],
     .hs-border-radius-#{$size} {
         border-radius: $size + px;
     }
-    .hs-child-border-top-left-radius-#{$size}>.hs,
+    .hs-child-border-top-left-radius-#{$size}>[class*="hs-"],
     .hs-border-top-left-radius-#{$size} {
         border-top-left-radius: $size + px;
     }
-    .hs-child-border-top-right-radius-#{$size}>.hs,
+    .hs-child-border-top-right-radius-#{$size}>[class*="hs-"],
     .hs-border-top-right-radius-#{$size} {
         border-top-right-radius: $size + px;
     }
-    .hs-child-border-bottom-right-radius-#{$size}>.hs,
+    .hs-child-border-bottom-right-radius-#{$size}>[class*="hs-"],
     .hs-border-bottom-right-radius-#{$size} {
         border-bottom-right-radius: $size + px;
     }
-    .hs-child-border-bottom-left-radius-#{$size}>.hs,
+    .hs-child-border-bottom-left-radius-#{$size}>[class*="hs-"],
     .hs-border-bottom-left-radius-#{$size} {
         border-bottom-left-radius: $size + px;
     }
@@ -39,13 +39,13 @@ left;
 @each $border_style_val in $border_style_list {
     //无边框颜色透明度
     // 四边边框   
-    .hs-child-border-1-#{$border_style_val}-gray>.hs,
+    .hs-child-border-1-#{$border_style_val}-gray>[class*="hs-"],
     .hs-border-1-#{$border_style_val}-gray {
         border: 1px $border_style_val gray;
     }
     // 单边边框   
     @each $border_direction_val in $border_direction_list {
-        .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray>.hs,
+        .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray>[class*="hs-"],
         .hs-border-#{$border_direction_val}-1-#{$border_style_val}-gray {
             border-#{$border_direction_val}: 1px $border_style_val gray;
         }
@@ -54,13 +54,13 @@ left;
     @for $alpha from 1 through 9 {
         $alpha-index: calc($alpha / 10);
             // 四边边框   
-            .hs-child-border-1-#{$border_style_val}-gray-0#{$alpha}>.hs,
+            .hs-child-border-1-#{$border_style_val}-gray-0#{$alpha}>[class*="hs-"],
             .hs-border-1-#{$border_style_val}-gray-0#{$alpha} {
                 border: 1px $border_style_val rgba(gray, $alpha-index);
             }
             // 单边边框   
             @each $border_direction_val in $border_direction_list {
-                .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray-0#{$alpha}>.hs,
+                .hs-child-border-#{$border_direction_val}-1-#{$border_style_val}-gray-0#{$alpha}>[class*="hs-"],
                 .hs-border-#{$border_direction_val}-1-#{$border_style_val}-gray-0#{$alpha} {
                     border-#{$border_direction_val}: 1px $border_style_val rgba(gray, $alpha-index);
                 }
@@ -72,13 +72,13 @@ left;
 @each $border_style_val in $border_style_list {
     @for $border-width from 1 through 5 {
         // 四边边框   
-        .hs-child-border-#{$border-width}-#{$border_style_val}>.hs,
+        .hs-child-border-#{$border-width}-#{$border_style_val}>[class*="hs-"],
         .hs-border-#{$border-width}-#{$border_style_val} {
             border:$border-width + px $border_style_val;
         }
         // 单边边框  
         @each $border_direction_val in $border_direction_list {
-            .hs-child-border-#{$border_direction_val}-#{$border-width}-#{$border_style_val}>.hs,
+            .hs-child-border-#{$border_direction_val}-#{$border-width}-#{$border_style_val}>[class*="hs-"],
             .hs-border-#{$border_direction_val}-#{$border-width}-#{$border_style_val} {
                 border-#{$border_direction_val}:$border-width + px $border_style_val;
             }
@@ -98,7 +98,7 @@ $border_color_list: (
 );
 
 @each $border_color_key,$border_color_val in $border_color_list {
-    .hs-child-border-color-#{$border_color_key}>.hs,
+    .hs-child-border-color-#{$border_color_key}>[class*="hs-"],
     .hs-border-color-#{$border_color_key} {
         border-color: $border_color_val;
     }
@@ -106,7 +106,7 @@ $border_color_list: (
     //排除无色透明度样式
         @for $alpha from 1 through 9 {
             $alpha-index: calc($alpha / 10);
-            .hs-child-border-color-#{$border_color_key}-0#{$alpha}>.hs,
+            .hs-child-border-color-#{$border_color_key}-0#{$alpha}>[class*="hs-"],
             .hs-border-color-#{$border_color_key}-0#{$alpha} {
                 border-color: rgba($border_color_val, $alpha-index);
             }
@@ -114,13 +114,13 @@ $border_color_list: (
 }
     
 //初始化四边框 none
-.hs-child-border-none>.hs,
+.hs-child-border-none>[class*="hs-"],
 .hs-border-none {
     border: none !important;
 }
 //初始化边框 单边框none
 @each $border_direction_val in $border_direction_list {
-    .hs-child-border-#{$border_direction_val}-none>.hs,
+    .hs-child-border-#{$border_direction_val}-none>[class*="hs-"],
     .hs-border-#{$border_direction_val}-none {
         border-#{$border_direction_val}: none !important;
     }
@@ -129,7 +129,7 @@ $border_color_list: (
 //3.透明度
 @for $i from 1 through 9 {
     $opacityVal: calc($i / 10);
-    .hs-child-opacity-0#{$i}>.hs,
+    .hs-child-opacity-0#{$i}>[class*="hs-"],
     .hs-opacity-0#{$i} {
         opacity: $opacityVal;
     }
@@ -142,11 +142,11 @@ $border_color_list: (
         @each $j in 5,10,15 {
 			@for $alpha-index from 1 through 3 {
 			    $alpha-val: calc($alpha-index / 10);
-				.hs-child-box-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>.hs,
+				.hs-child-box-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>[class*="hs-"],
 				.hs-box-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
 					box-shadow: $i + px $k + px $j + px rgba(black, $alpha-val);
 				}
-				.hs-child-text-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>.hs,
+				.hs-child-text-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>[class*="hs-"],
 				.hs-text-shadow-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
 					text-shadow: $i + px $k + px $j + px rgba(black, $alpha-val);
 				}
@@ -160,7 +160,7 @@ $border_color_list: (
         @each $j in 5,10,15 {
 			@for $alpha-index from 1 through 3 {
 			    $alpha-val: calc($alpha-index / 10);
-				.hs-child-box-shadow-inset-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>.hs,
+				.hs-child-box-shadow-inset-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index}>[class*="hs-"],
 				.hs-box-shadow-inset-#{$i}-#{$k}-#{$j}-black-0#{$alpha-index} {
 					box-shadow: $i + px $k + px $j + px rgba(black, $alpha-val) inset;
 				}
