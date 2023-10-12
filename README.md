@@ -11,7 +11,13 @@
 ``` css
 hs-list-col-[2-12] 网格式布局基类，步长1，必须
 hs-list-col-gap-[5-30] 单元格列间距(左右间距),位置与hs-list-col-[2-12]类同级，可选
+hs-list-col-gapline 单元格之间的间隔线 ,位置与hs-list-col-[2-12]类同级，可选
 ```
+
+> **间隔线支持如下自定义：**
+>   --hs-list-col-gapline-width: 1px;   // 间隔线宽度，默认1px
+>   --hs-list-col-gapline-color: gray; // 间隔线颜色，默认gray
+>   --hs-list-col-gapline-height: 10px; // 间隔线高度，默认10px
 
 **1.2、示例：**
 

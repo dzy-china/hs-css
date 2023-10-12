@@ -1,7 +1,7 @@
 const sass = require('sass');
 const csso = require('csso');
 const fs = require('fs');
-
+const version_name = require('./src/version_name');
 
 const input_file_path = './src/hs-css-for-html5/hs-css.scss';
 
@@ -20,10 +20,10 @@ const input_file_path = './src/hs-css-for-html5/hs-css.scss';
 
 
         // 生成未压缩css
-        fs.writeFileSync(`./dist/hs-css-for-html5.css`, unCompressedCss);
+        fs.writeFileSync(`./dist/hs-css-for-html5-v${version_name.get_version_name()}.css`, unCompressedCss);
 
         // 生成压缩css
-        fs.writeFileSync(`./dist/hs-css-for-html5.min.css`, compressedCss);
+        fs.writeFileSync(`./dist/hs-css-for-html5-v${version_name.get_version_name()}.min.css`, compressedCss);
 
         console.log("hs-css-for-html5 编译完成！")
 

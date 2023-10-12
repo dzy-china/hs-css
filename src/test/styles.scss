@@ -1,4 +1,5 @@
-$per: 5;
-.hs-width{
-  width: $per + vh;
+$marginGrade:6;
+
+.hs-list-col{
+  right: calc(-#{$marginGrade}px / 2);
 }

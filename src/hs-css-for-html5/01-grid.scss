@@ -11,6 +11,7 @@
     }    
     >*>* {
 		width:100%; //单列宽度
+        position: relative;
         float: left;
         box-sizing: border-box;
     }    
@@ -38,16 +39,41 @@ $marginGrade:6;
 
 
 /* 列属性 */
+
+// 列空隙 间隔线 
+:root{
+    --hs-list-col-gapline-width: 1px;   // 间隔线宽度
+    --hs-list-col-gapline-color: gray; // 间隔线颜色
+    --hs-list-col-gapline-height: 10px; // 间隔线高度
+}
+
 @for $col from 2 through 12 {
     //单元格基本列宽
     .hs-list-col-#{$col}>*>* {
         width: calc(100% / #{$col});
     }
+
+    // 列间隔线
+    .hs-list-col-#{$col}.hs-list-col-gapline>*>:not(:nth-child(#{$col}n), :last-child):after {
+        content:"";
+        border:var(--hs-list-col-gapline-width) solid var(--hs-list-col-gapline-color);
+        height:var(--hs-list-col-gapline-height);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-weight: normal;
+    }
+
+
     //单元格空隙
     @for $k from 1 through $marginGrade {
         $margin: getmargin($k);
         .hs-list-col-#{$col}.hs-list-col-gap-#{$margin}>*>* {
             width: calc((100% - #{$col} * #{$margin}px) / #{$col});
+        }
+        .hs-list-col-#{$col}.hs-list-col-gap-#{$margin}.hs-list-col-gapline>*>:not(:nth-child(#{$col}n), :last-child):after {
+            right: calc(-#{$margin}px / 2);
         }
     }
     // 每行首个单元格清除浮动，防止float引起的错位
