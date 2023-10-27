@@ -42,6 +42,7 @@ hs-list 每个子列表，必须
 ### 二、对齐
 #### 2.1、flex对齐方式
 **2.1.1、基础语法**
+
 ``` css
 hs-[row,col]-[start,center,end,between,around]-[start,center,end,stretch,baseline]
 hs-[row-reverse,col-reverse]
@@ -111,7 +112,7 @@ hs-absolute-center 定位居中对齐
 ### 三、元素类型
 #### 3.1、元素类型设置
 ``` css
-hs-display-[block,inline-block,inline, flex, inline-flex, table]
+hs-display-[none, block,inline-block,inline, flex, inline-flex, table]
 ```
 #### 3.2、弹性盒子
 > 注：内边距和边框包含在高度内

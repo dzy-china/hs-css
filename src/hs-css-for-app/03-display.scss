@@ -1,6 +1,8 @@
 /* 显隐控制 */
 // 1.元素类型显示设置
-$display_list: block,
+$display_list: 
+none,
+block,
 inline-block,
 flex,
 inline-flex,
