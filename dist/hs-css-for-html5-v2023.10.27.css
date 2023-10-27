@@ -1,10 +1,6 @@
 @charset "UTF-8";
 .hs-child-ini > *,
-.hs-child-ini > *:hover,
-.hs-child-ini > *:focus,
-.hs-ini,
-.hs-ini:hover,
-.hs-ini:focus {
+.hs-ini {
   all: unset;
 }
 
@@ -14,6 +10,11 @@ html.hs-ini {
   font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
+}
+
+a.hs-ini:hover,
+a.hs-ini:focus {
+  all: unset;
 }
 
 html, body {
