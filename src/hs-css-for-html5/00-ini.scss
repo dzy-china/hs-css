@@ -2,7 +2,10 @@
 .hs-ini{
     all:unset;
 }
-
+html{
+    width:100%;
+    height:100%; 
+}
 body.hs-ini,
 html.hs-ini {
     font-size: 14px;
