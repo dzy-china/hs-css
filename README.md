@@ -329,7 +329,7 @@ hs-transition-[01-09]
 ```
 #### 9.2、 x轴或y轴平移
 ``` css
-hs-transform-[translateX,translateY]-[005-00100]
+hs-transform-[translateX,translateY][-]-[005-00100]
 ```
 #### 9.3、 缩放
 
