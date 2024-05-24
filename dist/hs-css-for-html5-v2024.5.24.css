@@ -1668,6 +1668,11 @@ a.hs-ini:focus {
   position: relative;
 }
 
+.hs-child-position-sticky > *,
+.hs-position-sticky {
+  position: sticky;
+}
+
 .hs-child-position-fixed > *,
 .hs-position-fixed {
   position: fixed;
