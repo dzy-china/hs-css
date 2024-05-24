@@ -2,6 +2,7 @@
 //1.定位类型
 $position_list:absolute,
 relative,
+sticky,
 fixed;
 @each $position_val in $position_list {
     .hs-child-position-#{$position_val}>.hs,
