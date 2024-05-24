@@ -180,7 +180,7 @@ hs-user-select-none
 ### 五、定位
 #### 5.1、定位类型
 ``` css
-hs-position-[absolute,relative,fixed]
+hs-position-[absolute,relative,fixed,sticky]
 ```
 #### 5.2、定位层级设置
 > 注：hs-z-index-后数字代表z-index实际值
