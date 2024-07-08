@@ -264,6 +264,21 @@ hs-screen-shade-box
 ```
 #### 7.7、滚动条
 > 代替浏览器默认滚动条
+>
+> 注：
+>
+> 1. 必须指定`hs-overflow-[x,y]-[scroll,auto]`
+>
+> 2. 定义滚动条颜色
+>
+> ```css
+> :root { // 变量默认值
+>     --hs-scrollbar-track:transparent;// 滚动条背景颜色
+>     --hs-scrollbar-thumb:#D2D2D2;// 滚动条血条颜色
+> }
+> ```
+>
+> 
 ``` css
 hs-scrollbar
 ```
