@@ -196,15 +196,15 @@ hs-z-index-[1,10,100,1000,10000]
 
 ``` css
 hs-margin-auto
-hs-margin-[top,right,bottom,left]-[1-4,-1--4,5-100,-5--100]
+hs-margin-[top,right,bottom,left]-[0, 1-4,-1--4,5-100,-5--100]
 ```
 #### 6.2、内边距
 ``` css
-hs-padding-[top,right,bottom,left,left-right,top-bottom]-[1-4,5-100]
+hs-padding-[top,right,bottom,left,left-right,top-bottom]-[0, 1-4,5-100]
 ```
 #### 6.3、定位边距
 ``` css
-hs-[top,right,bottom,left]-[0-4,-1--4,5-100,-5--100,005-00100,-005--00100]
+hs-[top,right,bottom,left]-[0,1-4,-1--4,5-100,-5--100,005-00100,-005--00100]
 ```
 #### 6.4、宽度 高度
 ``` css
@@ -227,6 +227,7 @@ hs-border-[top-left,top-right,bottom-right,bottom-left]-radius-[5,10,15]
 ```
 #### 7.2、边框
 **7.2.1、完整边框**
+
 ``` css
 hs-border-1-[top,right,bottom,left]-[dotted,dashed,solid]-gray-[01-09]
 ```

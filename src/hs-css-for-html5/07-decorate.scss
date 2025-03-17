@@ -197,22 +197,24 @@ $border_color_list: (
 }
 
 //7.滚动条(代替浏览器默认滚动条)
-:root { // 变量默认值
-    --hs-scrollbar-track:transparent; // 滚动条背景颜色
-    --hs-scrollbar-thumb:#D2D2D2; // 滚动条血条颜色
+.hs-scrollbar-user-auto {
+    overflow: auto
+}
+.hs-scrollbar-user-y-scroll {
+    overflow-y: scroll;
 }
 
-.hs-scrollbar::-webkit-scrollbar {
+[class*="hs-scrollbar-"]::-webkit-scrollbar {
     width: 5px;
     height: 5px
 }
 
-.hs-scrollbar::-webkit-scrollbar-track {
-    background-color: var(--hs-scrollbar-track)
+[class*="hs-scrollbar-"]::-webkit-scrollbar-track {
+    background-color: transparent
 }
 
-.hs-scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--hs-scrollbar-thumb);
+[class*="hs-scrollbar-"]::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
     border-radius: 5px
 }
 

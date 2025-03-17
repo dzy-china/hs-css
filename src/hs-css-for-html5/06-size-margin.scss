@@ -1,0 +1,73 @@
+//边距
+//设置方向
+$direction_list1: top,
+right,
+bottom,
+left;
+
+//左右自动外边距
+.hs-child-margin-auto>*,
+.hs-margin-auto {
+    margin: 0 auto;
+}
+
+//0外边距
+.hs-child-margin-0>*,
+.hs-margin-0 {
+    margin: 0;
+}
+@each $direction_val in $direction_list1 {
+    .hs-child-margin-#{$direction_val}-0>*,
+    .hs-margin-#{$direction_val}-0 {
+        margin-#{$direction_val}: 0;
+    }
+}
+
+//微边距[1-4]px
+@for $i from 1 through 4 {
+    //四边外边距
+    .hs-child-margin-#{$i}>*,
+    .hs-margin-#{$i} {
+        margin: $i + px;
+    }
+
+    //单边设置
+    @each $direction_val in $direction_list1 {
+
+        //外边距微边距
+        .hs-child-margin-#{$direction_val}-#{$i}>*,
+        .hs-margin-#{$direction_val}-#{$i} {
+            margin-#{$direction_val}: $i + px;
+        }
+        .hs-child-margin-#{$direction_val}--#{$i}>*,
+        .hs-margin-#{$direction_val}--#{$i} {
+            margin-#{$direction_val}: -$i + px;
+        }
+
+    }
+}
+
+//通用边距[5-100]
+@for $k from 1 through 20 {
+    $margin: $k * 5;
+    //四边外边距
+    .hs-child-margin-#{$margin}>*,
+    .hs-margin-#{$margin} {
+        margin: $margin + px;
+    }
+
+     //单边设置
+    @each $direction_val in $direction_list1 {
+        .hs-child-margin-#{$direction_val}-#{$margin}>*,
+        .hs-margin-#{$direction_val}-#{$margin} {
+            margin-#{$direction_val}: $margin + px;
+        }
+        .hs-child-margin-#{$direction_val}--#{$margin}>*,
+        .hs-margin-#{$direction_val}--#{$margin} {
+            margin-#{$direction_val}: - $margin + px;
+        }
+
+        
+    }
+}
+

@@ -1,0 +1,64 @@
+//边距
+//设置方向
+$direction_list3: top,
+right,
+bottom,
+left;
+
+//定位0边距
+@each $direction_val in $direction_list3 {
+    .hs-child-#{$direction_val}-0>*,
+    .hs-#{$direction_val}-0 {
+        #{$direction_val}: 0;
+    }
+}
+
+//微边距[1-4]px
+@for $i from 1 through 4 {
+    @each $direction_val in $direction_list3 {
+        .hs-child-#{$direction_val}-#{$i}>*,
+        .hs-#{$direction_val}-#{$i} {
+            #{$direction_val}: $i + px;
+        }
+        .hs-child-#{$direction_val}--#{$i}>*,
+        .hs-#{$direction_val}--#{$i} {
+            #{$direction_val}: -$i + px;
+        }
+
+    }
+}
+
+//通用边距[5-100]
+@for $k from 1 through 20 {
+    $margin: $k * 5;
+    @each $direction_val in $direction_list3 {
+        .hs-child-#{$direction_val}-#{$margin}>*,
+        .hs-#{$direction_val}-#{$margin} {
+            #{$direction_val}: $margin + px;
+        }
+        .hs-child-#{$direction_val}--#{$margin}>*,
+        .hs-#{$direction_val}--#{$margin} {
+            #{$direction_val}: - $margin + px;
+        }
+
+        
+    }
+}
+
+//定位百分比边距
+@for $i from 1 through 20 {
+    $per: $i * 5;     
+    @each $direction_val in $direction_list3 {
+        .hs-child-#{$direction_val}-00#{$per}>*,
+        .hs-#{$direction_val}-00#{$per} {
+            #{$direction_val}: $per * 1%;
+        }
+        .hs-child-#{$direction_val}--00#{$per}>*,
+        .hs-#{$direction_val}--00#{$per} {
+            #{$direction_val}: - $per * 1%;
+        }
+    }
+}
+
+
+

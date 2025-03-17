@@ -1,0 +1,79 @@
+//边距
+//设置方向
+$direction_list2: top,
+right,
+bottom,
+left;
+
+//0内边距
+.hs-child-padding-0>*,
+.hs-padding-0 {
+    padding: 0;
+}
+@each $direction_val in $direction_list2 {
+    .hs-child-padding-#{$direction_val}-0>*,
+    .hs-padding-#{$direction_val}-0 {
+        padding-#{$direction_val}: 0;
+    }
+}
+
+//微边距[1-4]px
+@for $i from 1 through 4 {
+
+    //四边内边距
+    .hs-child-padding-#{$i}>*,
+    .hs-padding-#{$i} {
+        padding: $i + px;
+    }
+    //内边距(双边,由于此样式用时频率较高，故特加上)
+    .hs-child-padding-left-right-#{$i}>*,
+    .hs-padding-left-right-#{$i} {
+        padding-left:$i + px;
+        padding-right:$i + px;
+    }
+    .hs-child-padding-top-bottom-#{$i}>*,
+    .hs-padding-top-bottom-#{$i} {
+        padding-top:$i + px;
+        padding-bottom:$i + px;
+    }
+    //单边设置
+    @each $direction_val in $direction_list2 {
+        .hs-child-padding-#{$direction_val}-#{$i}>*,
+        .hs-padding-#{$direction_val}-#{$i} {
+            padding-#{$direction_val}: $i + px;
+        }
+    }
+}
+
+
+//通用边距[5-100]
+@for $k from 1 through 20 {
+    $margin: $k * 5;
+
+     //四边内边距
+    .hs-child-padding-#{$margin}>*,
+    .hs-padding-#{$margin} {
+        padding: $margin + px;
+    }
+    //内边距(双边,由于此样式用时频率较高，故特加上)
+    .hs-child-padding-left-right-#{$margin}>*,
+    .hs-padding-left-right-#{$margin} {
+        padding-left:$margin + px;
+        padding-right:$margin + px;
+    }
+    .hs-child-padding-top-bottom-#{$margin}>*,
+    .hs-padding-top-bottom-#{$margin} {
+        padding-top:$margin + px;
+        padding-bottom:$margin + px;
+    }
+     //单边设置
+    @each $direction_val in $direction_list2 {
+          //内边距
+        .hs-child-padding-#{$direction_val}-#{$margin}>*,
+        .hs-padding-#{$direction_val}-#{$margin} {
+            padding-#{$direction_val}: $margin + px;
+        }
+        
+    }
+}
+
