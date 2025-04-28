@@ -4,7 +4,7 @@ const fs = require('fs');
 const version_name = require('./src/version_name');
 
 
-const input_file_path = './src/hs-css-for-app/hs-css.scss';
+const input_file_path = './src/hs-css-for-uniapp_x/hs-css.scss';
 
 
 (async () => {
@@ -21,12 +21,12 @@ const input_file_path = './src/hs-css-for-app/hs-css.scss';
 
 
         // 生成未压缩css
-        fs.writeFileSync(`./dist/hs-css-for-app-v${version_name.get_version_name()}.css`, unCompressedCss);
+        fs.writeFileSync(`./dist/hs-css-for-uniapp_x/hs-css-for-uniapp_x-v${version_name.get_version_name()}.css`, unCompressedCss);
 
         // 生成压缩css
-        fs.writeFileSync(`./dist/hs-css-for-app-v${version_name.get_version_name()}.min.css`, compressedCss);
+        fs.writeFileSync(`./dist/hs-css-for-uniapp_x/hs-css-for-uniapp_x-v${version_name.get_version_name()}.min.css`, compressedCss);
 
-        console.log("hs-css-for-app 编译完成！")
+        console.log("hs-css-for-uniapp_x 编译完成！")
 
     } catch (err) {
         console.error(err);
