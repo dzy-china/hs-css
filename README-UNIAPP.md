@@ -206,7 +206,7 @@ hs-padding-[top,right,bottom,left,left-right,top-bottom]-[1-4,5-100]
 ``` css
 hs-[top,right,bottom,left]-[0-4,-1--4,5-100,-5--100,005-00100,-005--00100]
 ```
-#### 6.4、宽度 高度
+#### 6.4、宽高
 ``` css
 hs-width-[0-4]
 hs-[min,max]-width-[5-1200,005-00100]
@@ -219,7 +219,16 @@ hs-height-[5-100]-vh
 hs-[min,max]-height-[5-100]-vh
 ```
 
+#### 6.5 网格间距
+
+> 用于flex或grid布局时的行、列间距
+
+```css
+hs-[row,col]-gap-[5-15]
+```
+
 ### 七、装饰
+
 #### 7.1、圆角 
 ``` css
 border-radius-00100

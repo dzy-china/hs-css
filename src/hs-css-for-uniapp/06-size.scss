@@ -252,3 +252,27 @@ left;
         max-height: $per + vh;
     }
 }
+// 矫正uniapp h5端视口高度
+.hs-height-100-vh {
+    /* #ifdef H5 */
+    height: calc(100vh - var(--window-top));
+    /* #endif */
+}
+
+
+// gap间距(用于flex或grid布局时的行、列间距)
+@for $i from 1 through 3 {
+    $size: $i * 5;
+    .hs-child-gap-#{$size}>.hs,
+    .hs-gap-#{$size} {
+        gap: $size + px;
+    }
+    .hs-child-row-gap-#{$size}>.hs,
+    .hs-row-gap-#{$size} {
+        row-gap: $size + px;
+    }
+    .hs-child-col-gap-#{$size}>.hs,
+    .hs-col-gap-#{$size} {
+        column-gap: $size + px;
+    }
+}
